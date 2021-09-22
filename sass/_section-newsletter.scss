@@ -1,0 +1,47 @@
+.section-newsletter {
+   background-color: $blue-light;
+
+   width: 90%;
+   max-width: 65rem;
+
+   display: grid;
+   place-items: center;
+   gap: 2rem;
+
+   box-shadow: 4px 6px 10px 8px rgba(0, 0, 0, 0.15);
+   padding: 4rem 2rem;
+   border-radius: 1rem;
+
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.form {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+   width: 100%;
+
+   @media only screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+
+      .btn {
+         width: 50%;
+      }
+   }
+
+   .form-control {
+      width: 100%;
+      input[type="email"] {
+         font-family: inherit;
+
+         width: 100%;
+         padding: 1.5rem 3.5rem;
+         border-radius: 2rem;
+
+         background-color: $white;
+      }
+   }
+}

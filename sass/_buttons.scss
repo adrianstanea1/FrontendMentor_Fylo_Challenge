@@ -1,0 +1,56 @@
+.btn {
+   background-image: linear-gradient(to right, $accent-cyan 10%, $accent-blue);
+   border: 0;
+   color: currentColor;
+   font-size: 1.1rem;
+   padding: 1.5rem 3rem;
+   font-weight: 700;
+   border-radius: 2rem;
+   cursor: pointer;
+
+   transition: all 300ms ease;
+   box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.2);
+
+   &:hover {
+      transform: translateY(-3px);
+   }
+
+   &:active {
+      transform: scale(0.98);
+   }
+}
+
+.btn--link {
+   $transition: all 400ms ease;
+
+   color: $accent-cyan;
+   text-decoration: none;
+
+   padding-bottom: 0.5rem;
+   border-bottom: 2px solid currentColor;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   transition: $transition;
+
+   &::after {
+      margin-left: 1rem;
+      content: url(../../images/icon-arrow.svg);
+      transition: $transition;
+   }
+
+   &:hover {
+      transform: scale(1.05) translateY(-2px);
+
+      &::after {
+         margin-left: 2rem;
+      }
+   }
+
+   &:active,
+   &:focus {
+      transform: scale(0.95);
+   }
+}
